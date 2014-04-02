@@ -1,0 +1,23 @@
+{
+  "name": "elroy-pebble-driver",
+  "version": "0.0.1",
+  "description": "Pebble driver for elroy",
+  "main": "pebble_scout.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdobson/elroy-pebble-driver.git"
+  },
+  "keywords": [
+    "elroy",
+    "pebble"
+  ],
+  "author": "Matthew S Dobson <@mdobs>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdobson/elroy-pebble-driver/issues"
+  },
+  "homepage": "https://github.com/mdobson/elroy-pebble-driver"
+}
