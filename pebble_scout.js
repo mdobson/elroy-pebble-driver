@@ -1,7 +1,7 @@
 var EventEmitter = require('events').EventEmitter;
 var util = require('util');
 var Pebble = require('node-pebble');
-var PebbleDriver = require('../drivers/pebble_driver.js');
+var PebbleDriver = require('./pebble_driver.js');
 var serialPort = require("serialport");
 
 var serial = '/dev/tty.PebbleE8EA-SerialPortSe';
