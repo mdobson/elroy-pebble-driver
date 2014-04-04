@@ -1,6 +1,6 @@
 {
   "name": "elroy-pebble-driver",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Pebble driver for elroy",
   "main": "pebble_scout.js",
   "scripts": {
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/mdobson/elroy-pebble-driver/issues"
   },
-  "homepage": "https://github.com/mdobson/elroy-pebble-driver"
+  "homepage": "https://github.com/mdobson/elroy-pebble-driver",
+  "dependencies": {
+    "node-pebble": "0.0.2-dev"
+  }
 }
