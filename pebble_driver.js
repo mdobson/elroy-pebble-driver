@@ -18,6 +18,8 @@ var PebbleDriver = module.exports = function(pebble) {
       self.call('select-button');
     } else if (flag === 2) {
       self.call('top-button');
+    } else if (flag === 3) {
+      self.call('bottom-button');
     }
   });
 };
@@ -28,6 +30,7 @@ PebbleDriver.prototype.init = function(config) {
     .map('sms', this.sendSms, [{ name: 'sender', type: 'text'}, { name: 'body', type: 'text'}])
     .map('email', this.sendEmail, [{ name: 'sender', type: 'text'}, { name:'subject', type: 'text'}, { name: 'body', type: 'text' }])
     .map('top-button', this.topButton)
+    .map('bottom-button', this.bottomButton)
     .map('select-button', this.selectButton);
 };
 
@@ -57,5 +60,9 @@ PebbleDriver.prototype.topButton = function(cb) {
 };
 
 PebbleDriver.prototype.selectButton = function(cb) {
+  return cb();
+};
+
+PebbleDriver.prototype.bottomButton = function(cb) {
   return cb();
 };
