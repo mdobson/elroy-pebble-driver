@@ -39,7 +39,9 @@ PebbleDriver.prototype.sendSms = function(sender, body, cb) {
     if(err) {
       console.log('Error writing to pebble!');
     } else {
-      cb();
+      if(cb) {
+        cb();
+      }
     }
   });
 
@@ -50,19 +52,27 @@ PebbleDriver.prototype.sendEmail = function(sender, subject, body, cb) {
     if(err) {
       console.log('Error writing to pebble');
     } else {
-      cb();
+      if(cb) {
+        cb();
+      }
     }
   });
 };
 
 PebbleDriver.prototype.topButton = function(cb) {
-  return cb();
+  if(cb) {
+    return cb();
+  }
 };
 
 PebbleDriver.prototype.selectButton = function(cb) {
-  return cb();
+  if(cb) {
+    return cb();
+  }
 };
 
 PebbleDriver.prototype.bottomButton = function(cb) {
-  return cb();
+  if(cb) {
+    return cb();
+  }
 };
