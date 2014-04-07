@@ -1,6 +1,6 @@
 
 var PebbleDriver = module.exports = function(pebble) {
-  this.pebble = pebble;
+  this._pebble = pebble;
   this.state = 'online';
   this.type = 'smartwatch';
   this.name = 'Matts Pebble';
