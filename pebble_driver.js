@@ -9,9 +9,9 @@ var PebbleDriver = module.exports = function(pebble) {
   };
 
   var self = this;
-  this.pebble.on('application_message', function(size, data){
+  this._pebble.on('application_message', function(size, data){
     var tid = data[1];
-    self.pebble.ack(tid, function(){});
+    self._pebble.ack(tid, function(){});
     var flag = data.readInt32LE(26);
 
     if(flag === 1) {
@@ -35,7 +35,7 @@ PebbleDriver.prototype.init = function(config) {
 };
 
 PebbleDriver.prototype.sendSms = function(sender, body, cb) {
-  this.pebble.sms(sender, body, function(err) {
+  this._pebble.sms(sender, body, function(err) {
     if(err) {
       console.log('Error writing to pebble!');
     } else {
@@ -48,7 +48,7 @@ PebbleDriver.prototype.sendSms = function(sender, body, cb) {
 };
 
 PebbleDriver.prototype.sendEmail = function(sender, subject, body, cb) {
-  this.pebble.email(sender, subject, body, function(err) {
+  this._pebble.email(sender, subject, body, function(err) {
     if(err) {
       console.log('Error writing to pebble');
     } else {
